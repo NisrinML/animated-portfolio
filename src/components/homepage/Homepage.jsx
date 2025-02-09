@@ -3,6 +3,8 @@ import "./homepage.scss"
 import Me from '../../assets/images/nisreen-icon.png'
 import Scroll from '../../assets/images/scroll.svg'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
+import Icon from '../../ui/Icon/Icon'
 const textVariants = {
   initial: {
     x: -500,
@@ -39,6 +41,20 @@ const sliderVariants = {
   }
 }
 const Homepage = () => {
+
+  const handleButtonClick=(link)=>{
+    window.location.hash = link;
+  }
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/files/Nisreen Melhem CV.pdf'; 
+    link.download = 'NisreenMelhemCV.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+  
   return (
     <div className='home'>
       <div className='wrapper'>
@@ -48,11 +64,15 @@ const Homepage = () => {
             Nisreen Melhem
           </motion.h2>
           <motion.h1 variants={textVariants}>
-            Web developer and UI designer
+            Full Stack developer & Problem Solver
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>See the Latest Works</motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={()=>handleButtonClick('Portfolio')}>See the Latest Works</motion.button>
+            <motion.button variants={textVariants} onClick={()=>handleButtonClick('Contact')}>Contact Me</motion.button>
+            <motion.div className='cv'   onClick={handleDownload}>
+              <span>Look at my CV</span>
+              <Icon name="Download" w="100%" h="100%"/>
+            </motion.div>
           </motion.div>
 
           <motion.img variants={textVariants} src={Scroll} alt="" animate="scrollButton" />
@@ -61,7 +81,7 @@ const Homepage = () => {
       </div>
 
       <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate" >
-        Full Stuck Developer
+        Full Stack Developer
       </motion.div>
       <div className="image-container">
         <img src={Me} alt="" />

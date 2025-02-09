@@ -1,4 +1,5 @@
 @import "../../css/app.scss";
+
 .home {
     height: calc(100vh - 100px);
     background-color: var(--color-white);
@@ -9,9 +10,10 @@
         max-width: 1300px;
         height: 100%;
         margin: auto;
-        margin-left:200px ;
+        margin-left: 200px;
         z-index: 800;
-        position: relative; 
+        position: relative;
+
         .text-container {
             height: 100%;
             width: 50%;
@@ -29,26 +31,44 @@
             h1 {
                 font-size: 5.5rem;
             }
-            .buttons{
-            button{
-                z-index: 999;
-                padding:20px;
-                border:1px solid  var( --color-english-violet);
-                border-radius: 10px;
-                background-color:transparent ;
-                color:var( --color-dark-purpule) ;
-                margin-right: 20px;
-                cursor:pointer;
-                  font-weight: 400;
-                
+
+            .buttons {
+                display: flex;
+                .cv,button {
+                    z-index: 999;
+                    padding: 20px;
+                    border: 1px solid var(--color-english-violet);
+                    border-radius: 10px;
+                    background-color: transparent;
+                    color: var(--color-dark-purpule);
+                    margin-right: 20px;
+                    cursor: pointer;
+                    font-weight: 400;
+
+                }
+
+                .cv:hover,button:hover {
+                    background-color: var(--color-english-violet);
+                    color: var(--color-white);
+                    font-weight: 700;
+
+                    svg{
+                        g{
+                            fill: var(--color-white);
+                        }
+                    }
+                }
+                .cv{
+                    display: flex;
+                    justify-content: center;
+                    gap:0.5rem;
+                }
+
             }
-            button:hover{
-                background-color:var( --color-english-violet) ;
-                color: var(--color-white);
-                font-weight: 700;
-            }
+
         
-        }
+            
+
             img {
                 width: 100px;
             }
@@ -63,7 +83,7 @@
         right: 10%;
     }
 
-    .slidingTextContainer{
+    .slidingTextContainer {
         position: absolute;
         font-size: 50vh;
         bottom: -100px;

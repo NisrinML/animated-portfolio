@@ -17,24 +17,31 @@ const Navbar = () => {
                 Nisreen Melhem
             </motion.span>
             <div className="social">  
-                <motion.a href='#' className='icon' 
-                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
+                <motion.a href='https://www.linkedin.com/in/nisreen-melhem-a565522b7' className='icon' 
+                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}
+                 target="_blank" rel="noopener noreferrer">
                     <Icon name="LinkedIn" w="100%" h="100%"/>
                 </motion.a>
-                <motion.a href='#' className='icon'
-                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
+                <motion.a href='https://gitlab.com/Nsns9' className='icon'
+                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}
+                 target="_blank" rel="noopener noreferrer">
                 <Icon name="Gitlab" w="100%" h="100%"/>
                 </motion.a>
-                <motion.a href='#' className='icon'
-                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
+                <motion.a href='https://github.com/NisrinML' className='icon'
+                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}
+                 target="_blank" rel="noopener noreferrer">
                 <Icon name="Github" w="100%" h="100%"/>
                 </motion.a>
-                <motion.a href='#' className='icon'
-                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
+                <motion.a href='https://www.facebook.com/share/18KyrpQ9oG/' className='icon'
+                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}
+                 target="_blank" rel="noopener noreferrer"
+                 >
                 <Icon name="Facebook" w="100%" h="100%"/>
                 </motion.a> 
-                <motion.a href='#' className='icon'
-                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
+                <motion.a href='https://www.instagram.com/nisrin.melhem?igsh=cGkzaGp2bTUzNjBy' className='icon'
+                 whileHover={{scale:1.1}} whileTap={{scale:0.95}}
+                 target="_blank" rel="noopener noreferrer"
+                 >
                 <Icon name="Instagram" w="100%" h="100%"/>
                 </motion.a>
               

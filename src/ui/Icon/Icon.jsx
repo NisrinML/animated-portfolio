@@ -12,6 +12,10 @@ const icons = {
   Close: lazy(() => import("../icons/Close")),
   Menu: lazy(() => import("../icons/Menu")),
   Lock: lazy(() => import("../icons/Lock")),
+  Mail: lazy(() => import("../icons/Mail")),
+  Contact: lazy(() => import("../icons/Contact")),
+  Address: lazy(() => import("../icons/Address")),
+  Download: lazy(() => import("../icons/Download"))
 };
 
 function Icon({ name, w = "30", h="30", c = "dark", hover, m, circle, ...rest }) {

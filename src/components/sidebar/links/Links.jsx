@@ -26,11 +26,12 @@ const linkVariants={
 const Links = () => {
   const links=[
     "Homepage",
+    "About",
     "Services",
-    "Skills",
+    "Skills", 
     "Portfolio",
-    "Contact",
-    "About"]
+    "Contact"
+   ]
   return (
     <motion.div className='links' variants={variants}>
       {

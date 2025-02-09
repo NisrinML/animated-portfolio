@@ -4,19 +4,26 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/parallax";
 import Services from "./components/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
+
 const App = () => {
-  return <div>   
+
+
+  return <div>
     <section id="Homepage">
-      <Navbar/>
-      <Homepage/>
+      <Navbar />
+      <Homepage />
     </section>
-    <section id="Services"><Parallax type="services"/></section>
-    <section><Services/></section>
-    <section id="Portfolio"><Parallax type="portifolio"/></section>
-    <Portfolio/>
     <section id="About">About</section>
+    <section id="Services"><Parallax type="services" /></section>
+    <section><Services /></section>
     <section id="Skills">Skills</section>
-    <section id="Contant">Contact</section>
+    <section id="Portfolio"><Parallax type="portifolio" /></section>
+    <Portfolio />
+
+    <section id="Contact">
+      <Contact/>
+    </section>
 
   </div>
 };
