@@ -1,0 +1,25 @@
+@import "../../css/app.scss";
+
+.navbar{
+    height: 100px;
+    .wrapper{
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        span{
+            font-weight: bold;
+        }
+
+        .social{
+            display: flex;
+            gap:1rem;
+        }
+    }
+}
+.icon{
+    width: 3rem;
+    height: 3rem;
+}

@@ -1,0 +1,34 @@
+:root {
+    --color-white: #fff;
+    --color-english-violet: #6D466B;
+    --color-dark-purpule:#412234;
+    --color-light-purpule:#EAD7D7;
+    --color-thistle:#D2C4E3;
+    --color-wisteria:#B49FCC;
+    ;
+  }
+
+html{
+    scroll-snap-type:  y proximity;
+    scroll-behavior: smooth;
+}
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+   font-family: "DM Sans",sans-serif;
+}
+body{
+    background-color: var(--color-white);
+    color: var(--color-dark-purpule);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+section{
+    height: 100vh;
+    scroll-snap-align: start; 
+    overflow: hidden;
+}

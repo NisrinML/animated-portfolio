@@ -1,0 +1,42 @@
+.wrap {
+    line-height: 0;
+    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+  
+    &.hover {
+      cursor: pointer;
+  
+      &.circle {
+        width: calc(30px + 22px);
+        height: calc(30px + 22px);
+        display: inline-block;
+        border-radius: 200px;
+        background-color: var(--color-dark); 
+  
+        svg {
+          fill: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+  
+      svg {
+        fill: var(--color-dark); 
+        width: 30px; 
+        height: 30px;
+        margin: 0;
+      }
+  
+      &:hover {
+        fill: var(--color-primary); 
+        background-color: var(--color-white); 
+        opacity: 1; 
+      }
+  
+      &:active {
+        background-color: var(--color-gray400);
+        transform: scale(0.99);
+      }
+    }
+  }
