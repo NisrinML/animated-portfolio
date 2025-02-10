@@ -4,83 +4,83 @@ import Phone from '../../ui/icons/Phone'
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import Icon from '../../ui/Icon/Icon'
-const variants={
-    initial:{
-        y:500,
-        opacity:0
+const variants = {
+    initial: {
+        y: 500,
+        opacity: 0
     },
-    animate:{
-        y:0,
-        opacity:1,
-        transition:{
-            duration:0.5,
-            staggerChildren:0.1
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            staggerChildren: 0.1
         }
     }
 }
 const Contact = () => {
-    const labels = [{ id: 1, title: 'Mail', text: 'nisreenmelhem3@gmail.com',icon:'Mail' }, { id: 2, title: 'Address', text: 'Baghdad street/ Homs/ Syria',icon:'Address' }, { id: 3, title: 'Phone', text: '(+963) 992 448 443',icon:'Contact' }]
-    const ref=useRef()
-    const formRef=useRef()
-    const [error,setError]=useState(null)
-    const [errMsg,setErrMsg]=useState('')
+    const labels = [{ id: 1, title: 'Mail', text: 'nisreenmelhem3@gmail.com', icon: 'Mail' }, { id: 2, title: 'Address', text: 'Baghdad street/ Homs/ Syria', icon: 'Address' }, { id: 3, title: 'Phone', text: '(+963) 992 448 443', icon: 'Contact' }]
+    const ref = useRef()
+    const formRef = useRef()
+    const [error, setError] = useState(null)
+    const [errMsg, setErrMsg] = useState('')
     const sendEmail = (e) => {
         e.preventDefault();
-    
+
         emailjs
-          .sendForm('service_tzt57lg', 'template_rqvpjpn', formRef.current, {
-            publicKey: 'MoQ90ZdGyMzKjRcZh',
-          })
-          .then(
-            () => {
-                setError(false)
-            },
-            (error) => {
-                setError(true)
-              setErrMsg(error.text)
-            },
-          );
-      };
+            .sendForm('service_tzt57lg', 'template_rqvpjpn', formRef.current, {
+                publicKey: 'MoQ90ZdGyMzKjRcZh',
+            })
+            .then(
+                () => {
+                    setError(false)
+                },
+                (error) => {
+                    setError(true)
+                    setErrMsg(error.text)
+                },
+            );
+    };
 
     return (
         <motion.div className='contact' variants={variants} ref={ref}
-        initial="initial" whileInView="animate">
-        <motion.div className='wrapper'  variants={variants}>
-            <motion.div className="textContainer" variants={variants}>
-                <motion.h1 variants={variants}>Let's work together</motion.h1>
-                {labels.map((label) => {
-                    return (
-                        <motion.div variants={variants} className='label' key={label.id} >
-                            <div className='iconContainer'>
-                                <Icon name={label.icon} w="100%" h="100%"/>
-                            </div>
-                        <motion.div className="item"variants={variants}>
-                            <h2>{label.title}</h2>
-                            <span>{label.text}</span>
-                        </motion.div>
-                        </motion.div>
-                    )
-                })}
+            initial="initial" whileInView="animate">
+            <motion.div className='wrapper' variants={variants}>
+                <motion.div className="textContainer" variants={variants}>
+                    <motion.h1 variants={variants}>Let's work together</motion.h1>
+                    {labels.map((label) => {
+                        return (
+                            <motion.div variants={variants} className='label' key={label.id} >
+                                <div className='iconContainer'>
+                                    <Icon name={label.icon} w="100%" h="100%" />
+                                </div>
+                                <motion.div className="item" variants={variants}>
+                                    <h2>{label.title}</h2>
+                                    <span>{label.text}</span>
+                                </motion.div>
+                            </motion.div>
+                        )
+                    })}
+
+                </motion.div>
+                <div className="formContainer">
+                    <motion.div className="phoneSvg" initial={{ opacity: 1 }}
+                        whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }} >
+                        <Phone contactRef={ref} />
+                    </motion.div>
+                    <motion.form initial={{ opacity: 0 }} ref={formRef} onSubmit={sendEmail}
+                        whileInView={{ opacity: 1 }} transition={{ delay: 4, duration: 1 }} >
+                        <input type='text' placeholder='Name' name='name' required />
+                        <input type='email' placeholder='Email' name='email' required />
+                        <textarea rows='8' placeholder='Message' name='message' required />
+                        <button type='submit'>Send Message</button>
+                        {error && <span className='error'>{errMsg}</span>}
+                    </motion.form>
+                </div>
 
             </motion.div>
-            <div className="formContainer">
-                    <motion.div className="phoneSvg" initial={{opacity:1}}
-                    whileInView={{opacity:0}} transition={{delay:3,duration:1}} >
-                     <Phone contactRef={ref}/>
-                    </motion.div>
-                <motion.form initial={{opacity:0}} ref={formRef} onSubmit={sendEmail}
-                    whileInView={{opacity:1}} transition={{delay:4,duration:1}} >
-                    <input type='text' placeholder='Name' name='name' required/>
-                    <input type='email' placeholder='Email' name='email' required/>
-                    <textarea rows='8' placeholder='Message' name='message' required/>
-                    <button type='submit'>Send Message</button>
-                  {error&&<span className='error'>{errMsg}</span>}
-                </motion.form>
-            </div>
-         
-        </motion.div>
-        <motion.div className="footerContainer" variants={variants}>
-            <span className='footerText'>Copyright 2025 © <b>Nisreen Melhem</b></span>
+            <motion.div className="footerContainer" variants={variants}>
+                <span className='footerText'>Copyright 2025 © <b>Nisreen Melhem</b></span>
             </motion.div>
         </motion.div>
     )
