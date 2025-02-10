@@ -45,7 +45,7 @@ const Contact = () => {
     return (
         <motion.div className='contact' variants={variants} ref={ref}
         initial="initial" whileInView="animate">
-        <motion.div className='wrapper'>
+        <motion.div className='wrapper'  variants={variants}>
             <motion.div className="textContainer" variants={variants}>
                 <motion.h1 variants={variants}>Let's work together</motion.h1>
                 {labels.map((label) => {
