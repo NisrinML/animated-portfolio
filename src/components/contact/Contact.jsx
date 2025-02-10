@@ -23,9 +23,12 @@ const Contact = () => {
     const ref = useRef()
     const formRef = useRef()
     const [error, setError] = useState(null)
+    const [success, setSuccess] = useState(null)
     const [errMsg, setErrMsg] = useState('')
+    const [isLoading, setIsLoading] = useState(false);
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsLoading(true);
 
         emailjs
             .sendForm('service_tzt57lg', 'template_rqvpjpn', formRef.current, {
@@ -34,11 +37,23 @@ const Contact = () => {
             .then(
                 () => {
                     setError(false)
+                    setIsLoading(false); 
+                    setSuccess(true)
+                    const nameInput = document.getElementsByName('name')[0];
+                    const emailInput = document.getElementsByName('email')[0];
+                    const messageInput = document.getElementsByName('message')[0];
+            
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    messageInput.value = '';
                 },
                 (error) => {
                     setError(true)
                     setErrMsg(error.text)
+                    setIsLoading(false); 
+                    setSuccess(false)
                 },
+                
             );
     };
 
@@ -73,8 +88,11 @@ const Contact = () => {
                         <input type='text' placeholder='Name' name='name' required />
                         <input type='email' placeholder='Email' name='email' required />
                         <textarea rows='8' placeholder='Message' name='message' required />
-                        <button type='submit'>Send Message</button>
+                        <button type='submit'>
+                        {isLoading?<Icon name="Loading" w="100%" h="100%"/>:'Send Message'} 
+                            </button>
                         {error && <span className='error'>{errMsg}</span>}
+                        {success&&<span className='success'>Message sent successfully</span>}
                     </motion.form>
                 </div>
 
