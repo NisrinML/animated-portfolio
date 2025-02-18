@@ -64,7 +64,7 @@ const Homepage = () => {
             Nisreen Melhem
           </motion.h2>
           <motion.h1 variants={textVariants}>
-            Full Stack developer & Problem Solver
+          Full Stack developer & Problem Solver
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
             <motion.button variants={textVariants} onClick={()=>handleButtonClick('Portfolio')}>See the Latest Works</motion.button>

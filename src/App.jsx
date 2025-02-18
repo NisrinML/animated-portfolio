@@ -16,20 +16,21 @@ const App = () => {
       <Navbar />
       <Homepage />
     </section>
-    <section id="About">
+    {/* <section id="About">
       <About />
-    </section>
-    <section id="Services"><Parallax type="services" /></section>
-    <section><Services /></section>
-    <section id="Skills">
+    </section> */}
+    {/* <section id="Services"><Parallax type="services" /></section> */}
+    {/* <section><Services /></section> */}
+    {/* <section id="Skills">
       <Skills/>
-    </section>
-    <section id="Portfolio"><Parallax type="portifolio" /></section>
-    <Portfolio />
+    </section> */}
+    {/* <section id="Portfolio"><Parallax type="portifolio" /></section>
+     */}
+    {/* <Portfolio /> */}
 
-    <section id="Contact">
+    {/* <section id="Contact">
       <Contact />
-    </section>
+    </section> */}
 
   </div>
 };
