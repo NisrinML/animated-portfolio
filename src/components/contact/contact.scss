@@ -1,3 +1,4 @@
+@import "../../css/app.scss";
 .contact {
     height: 100%;
     max-width: 1300px;
@@ -12,36 +13,79 @@
         align-items: center;
         justify-content: center;
         gap: 3rem;
-
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+            padding: 10px;
+          }
         .textContainer {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 3rem;
-
+            @include mobile {
+                gap: 1rem;
+                text-align: center;
+                align-items: center;
+                margin-top: 100px; 
+              }
             .label {
                 display: flex;
                 justify-content: start;
                 align-items: center;
                 gap: 1rem;
-
+                @include mobile {
+                   align-self: flex-start;
+                }
                 .iconContainer {
                     width: 3rem;
                     height: 3rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                  
+                    span{
+                        svg{
+                        @include mobile {
+                            width: 2rem;
+                            height: 2rem;
+                         }
+                        }
+                    }
+                    
                 }
+              
 
                 h1 {
                     font-size: 4.5rem;
                     line-height: 60px;
+                    @include mobile {
+                        font-size: 2rem;
+                      }
                 }
-
+                h2{
+                    @include mobile {
+                        font-size: 1.2rem;
+                       
+                      }
+                }
                 span {
                     font-weight: 300;
                     font-size: 1.2rem;
+                    @include mobile {
+                        font-size: 1rem;
+                      
+                      }
                 }
+
+                .item{
+                    @include mobile {
+                        text-align: start;
+                          }
+                  
+                }
+
+            
             }
 
 
@@ -51,12 +95,22 @@
         .formContainer {
             flex: 1;
             position: relative;
-
+            @include mobile {
+                width: 80%;
+                padding-bottom: 3rem;
+              }
             .phoneSvg {
                 position: absolute;
                 margin: auto;
                 stroke: var(--color-english-violet);
                 z-index: -1;
+                svg{
+                    @include mobile {
+                  width: 250px;
+                  height: 300px;
+                  }
+                }
+                
 
             }
 
@@ -74,6 +128,10 @@
                     color: var(--color-dark-purpule);
                     border-radius: 10px;
                     font-size: 1rem;
+
+                    @include mobile {
+                       padding: 0.5rem;
+                      }
                 }
 
                 input::placeholder,
@@ -97,6 +155,10 @@
                     font-weight: 500;
                     border-radius: 10px;
                     font-size: 1rem;
+                    @include mobile {
+                      padding: 10px;
+                      font-size: 0.8rem;
+                      }
                 }
 
                 button:hover {
@@ -128,6 +190,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mobile {
+            height: 2rem;
+            font-size: 0.8rem;
+          }
         
     }
 

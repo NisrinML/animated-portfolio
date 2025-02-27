@@ -26,11 +26,11 @@ const App = () => {
     </section> */}
     <section id="Portfolio"><Parallax type="portifolio" /></section>
     
-    {/* <Portfolio /> */}
+    <Portfolio />
 
-    {/* <section id="Contact">
+    <section id="Contact" className="private">
       <Contact />
-    </section> */}
+    </section>
 
   </div>
 };
