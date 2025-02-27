@@ -34,6 +34,7 @@ section{
     overflow: hidden;
 }
 
+
 @mixin mobile{
     @media (max-width:738px){
         @content;
@@ -49,4 +50,11 @@ section{
     @media (max-width:1300px){
         @content;
     }
+}
+
+.private{
+    @include mobile {
+        height: fit-content;
+      }
+   
 }
