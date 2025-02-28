@@ -80,6 +80,13 @@
                             fill: var(--color-white);
                         }
                     }
+
+                    @include mobile {
+                        height: 3rem;
+                        font-size: 0.7rem;
+                        padding: 8px;
+                        font-weight: 500;
+                       }
                 }
                 .cv{
                     display: flex;

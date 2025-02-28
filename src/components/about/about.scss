@@ -90,6 +90,10 @@
         button:hover{
             background-color: var(--color-dark-purpule);
             font-size: 1.1rem;
+            @include mobile {
+                padding: 10px;
+                font-size: 0.9rem;
+                  }
         }
 
     }
