@@ -12,12 +12,17 @@ import Aora from "../../assets/images/aora.png"
 import Services from "../../assets/images/car-services.png"
 import Wakalat from "../../assets/images/wakalat-archive.png"
 import Job from "../../assets/images/job-position.png"
+import Myfamily from "../../assets/images/myfamily.png"
 const Portfolio = () => {
   const projects = [
-    // {
-    //   id: 1, title: 'eSchool', image: Eschool, company: 'HNNDES', link: '',
-    //   desc: 'A responsive dashboard for managing all activities in an educational institution. Designed using React.js, Redux, Styled-Component, Css/Sass, Yup and JavaScript.'
-    // },
+    {
+      id: 11, title: 'My Family Foundation', image: Myfamily, company: 'me', link: 'https://myfamilyfoundation.netlify.app/',
+      desc: 'An introductory website for a volunteer foundation. Designed using Next.js, Tailwind-Css, Framer-motion, EmailJS and JavaScript.'
+    },
+    {
+      id: 1, title: 'eSchool', image: Eschool, company: 'HNNDES', link: '',
+      desc: 'A responsive dashboard for managing all activities in an educational institution. Designed using React.js, Redux, Styled-Component, Css/Sass, Yup and JavaScript.'
+    },
     {
       id: 2, title: 'TourBook', image: Tourbook, company: 'me', link: 'https://github.com/NisrinML/tour-book.git',
       desc: 'A website that offers a new way for make a specific tour, publish it, register on it and more. Designed using React.js, React-leaflet, Redux-Toolkit, Tailwind-Css, Yup, Axios and JavaScript.'

@@ -18,9 +18,9 @@ const variants = {
 
 const Skills = () => {
     const ref=useRef()
-    const skillsList=['React.js','React Native','Redux Toolkit','Axios',
+    const skillsList=['React.js','React Native','Next.js','Redux Toolkit','Axios',
         'Yup','JavaScript / TypeScript','Bootstrap','HTML','CSS / SASS','Tailwind Css','NativeWind','Styled-Component','Asp.Net',
-        'MSSQL','Figma','C / C++','Git (Github, Gitlab)','JIRA','Agile','GeoLocation & Maps'    ]
+        'MSSQL','Figma','C / C++','Git (Github, Gitlab)','JIRA','GeoLocation & Maps'    ]
   return (
     <motion.div className='skills'variants={variants} ref={ref}
     initial="initial" whileInView="animate">
