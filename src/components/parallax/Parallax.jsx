@@ -18,7 +18,7 @@ const Parallax = ({type}) => {
             {type=='services'?'What I Do?':'What I Did?'}
         </motion.h1>
         <motion.div className="mountains"></motion.div>
-        {/*to change the planet image: backgroundImage:`url(${type=='services'?'/src/assets/images/planets.png':'/src/assets/images/sun.png'})` */}
+        {/*to change the planet image: backgroundImage:`url(${type=='services'?'/src/assets/images/planets.webp':'/src/assets/images/sun.webp'})` */}
         <motion.div style={{y:yBg,}} className="planets"
         ></motion.div>
         <motion.div style={{x:yBg}} className="stars"></motion.div>

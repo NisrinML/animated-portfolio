@@ -2,12 +2,12 @@ import { useRef } from 'react'
 import Icon from '../../ui/Icon/Icon'
 import './services.scss'
 import { motion, useInView } from 'framer-motion'
-import Web from "../../assets/images/web.png"
-import Mobile from "../../assets/images/mobile.png"
-import Problem from "../../assets/images/problem-solve.png"
-import Uiux from "../../assets/images/ui-ux.png"
-import Teach from "../../assets/images/teach.png"
-import People from "../../assets/images/people.jpg"
+import Web from "../../assets/images/web.webp"
+import Mobile from "../../assets/images/mobile.webp"
+import Problem from "../../assets/images/problem-solve.webp"
+import Uiux from "../../assets/images/ui-ux.webp"
+import Teach from "../../assets/images/teach.webp"
+import People from "../../assets/images/people.webp"
 
 const variants = {
   initial: {
@@ -52,7 +52,7 @@ const Services = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src={People} />
+          <img src={People} alt="building solution image" loading='lazy'/>
           <h1>Building&nbsp;
             <b>Robust</b> Solutions
           </h1>
@@ -72,7 +72,7 @@ const Services = () => {
               <h2>{service.name}</h2>
               <b>{service.explain}</b>
               <div className="image" >
-                <img src={service.icon} width='100%' height='100%' />
+                <img src={service.icon} width='100%' height='100%' alt={`service_`+service.id} loading='lazy'/>
               </div>
             </motion.div>
           )

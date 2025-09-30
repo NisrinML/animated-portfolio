@@ -2,27 +2,27 @@ import React, { useRef } from 'react';
 import './portfolio.scss'
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import Icon from '../../ui/Icon/Icon'
-import Eschool from "../../assets/images/eschool.png"
-import Tourbook from "../../assets/images/tourbook.png"
-import Automate from "../../assets/images/automate.png"
-import Dashboard from "../../assets/images/car-dashboard.png"
-import Teneze from "../../assets/images/teneze-game.png"
-import Meme from "../../assets/images/meme-creator.png"
-import Aora from "../../assets/images/aora.png"
-import Services from "../../assets/images/car-services.png"
-import Wakalat from "../../assets/images/wakalat-archive.png"
-import Job from "../../assets/images/job-position.png"
-import Myfamily from "../../assets/images/myfamily.png"
+import Eschool from "../../assets/images/eschool.webp"
+import Tourbook from "../../assets/images/tourbook.webp"
+import Automate from "../../assets/images/automate.webp"
+import Dashboard from "../../assets/images/car-dashboard.webp"
+import Teneze from "../../assets/images/teneze-game.webp"
+import Meme from "../../assets/images/meme-creator.webp"
+import Aora from "../../assets/images/aora.webp"
+import Services from "../../assets/images/car-services.webp"
+import Wakalat from "../../assets/images/wakalat-archive.webp"
+import Job from "../../assets/images/job-position.webp"
+import Myfamily from "../../assets/images/myfamily.webp"
 const Portfolio = () => {
   const projects = [
     {
       id: 11, title: 'My Family Foundation', image: Myfamily, company: 'me', link: 'https://myfamilyfoundation.netlify.app/',
       desc: 'An introductory website for a volunteer foundation. Designed using Next.js, Tailwind-Css, Framer-motion, EmailJS and JavaScript.'
     },
-    {
-      id: 1, title: 'eSchool', image: Eschool, company: 'HNNDES', link: '',
-      desc: 'A responsive dashboard for managing all activities in an educational institution. Designed using React.js, Redux, Styled-Component, Css/Sass, Yup and JavaScript.'
-    },
+    // {
+    //   id: 1, title: 'eSchool', image: Eschool, company: 'HNNDES', link: '',
+    //   desc: 'A responsive dashboard for managing all activities in an educational institution. Designed using React.js, Redux, Styled-Component, Css/Sass, Yup and JavaScript.'
+    // },
     {
       id: 2, title: 'TourBook', image: Tourbook, company: 'me', link: 'https://github.com/NisrinML/tour-book.git',
       desc: 'A website that offers a new way for make a specific tour, publish it, register on it and more. Designed using React.js, React-leaflet, Redux-Toolkit, Tailwind-Css, Yup, Axios and JavaScript.'
@@ -97,7 +97,7 @@ const Portfolio = () => {
         <div className="container">
           <div className="wrapper">
             <div className="imageContainer" ref={ref}>
-              <img src={project.image} />
+              <img src={project.image} alt={`project_`+project.id} loading='lazy' />
             </div>
             <motion.div className="textContainer" style={{ y }}>
               <h2 >{project.title}</h2>

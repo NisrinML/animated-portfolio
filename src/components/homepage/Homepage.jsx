@@ -1,7 +1,7 @@
 import React from 'react'
 import "./homepage.scss"
-import Me from '../../assets/images/nisreen-icon.png'
-import Scroll from '../../assets/images/scroll.svg'
+import Me from '../../assets/images/nisreen-icon.webp'
+import Scroll from '../../assets/images/scroll.webp'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import Icon from '../../ui/Icon/Icon'
@@ -75,7 +75,7 @@ const Homepage = () => {
             </motion.div>
           </motion.div>
 
-          <motion.img variants={textVariants} src={Scroll} alt="" animate="scrollButton" />
+          <motion.img variants={textVariants} src={Scroll} alt="scroll button" animate="scrollButton" loading='lazy' />
 
         </motion.div>
       </div>
@@ -84,7 +84,7 @@ const Homepage = () => {
         Full Stack Developer
       </motion.div>
       <div className="image-container">
-        <img src={Me} alt="" />
+        <img src={Me} alt="nisreen's image" loading='lazy'/>
       </div>
     </div>
   )

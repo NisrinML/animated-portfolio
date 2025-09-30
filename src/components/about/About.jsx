@@ -1,5 +1,5 @@
 import './about.scss'
-import Me from '../../assets/images/me.jpg'
+import Me from '../../assets/images/me.webp'
 import Icon from '../../ui/Icon/Icon'
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
@@ -32,7 +32,7 @@ const About = () => {
         <motion.div className='about' variants={variants} ref={ref}
             initial="initial" whileInView="animate">
             <motion.div className="imageContainer" variants={variants} >
-                <img src={Me} />
+                <img src={Me} alt="nisreen's image" loading='lazy'/>
             </motion.div>
             <motion.div className="textContainer" variants={variants} >
                 <h1>Nisreen Melhem</h1>
