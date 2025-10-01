@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import Icon from '../../../ui/Icon/Icon'
 const ToggleButton = ({setOpen}) => {
   return (
-    <button onClick={() =>setOpen(prev=>!prev) }>
+    <button onClick={() =>setOpen(prev=>!prev) }  aria-label="Toggle Button">
      {/* {open?<Icon name="Close"/>:<Icon name="Menu"/>} */}
     
    <svg width="23" height="23" viewBox="0 0 23 23">
