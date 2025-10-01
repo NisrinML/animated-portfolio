@@ -88,7 +88,7 @@ const Contact = () => {
                         <input type='text' placeholder='Name' name='name' required />
                         <input type='email' placeholder='Email' name='email' required />
                         <textarea rows='8' placeholder='Message' name='message' required />
-                        <button type='submit'>
+                        <button type='submit'  aria-label="submit">
                         {isLoading?<Icon name="Loading" w="100%" h="100%"/>:'Send Message'} 
                             </button>
                         {error && <span className='error'>{errMsg}</span>}

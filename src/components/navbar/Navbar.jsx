@@ -17,28 +17,28 @@ const Navbar = () => {
                 Nisreen Melhem
             </motion.span> */}
             <div className="social">  
-                <motion.a href='https://www.linkedin.com/in/nisreen-melhem-a565522b7' className='icon' 
+                <motion.a href='https://www.linkedin.com/in/nisreen-melhem-a565522b7' className='icon'   aria-label="LinkedIn"
                  whileHover={{scale:1.1}} whileTap={{scale:0.95}}
                  target="_blank" rel="noopener noreferrer">
                     <Icon name="LinkedIn" w="100%" h="100%"/>
                 </motion.a>
-                <motion.a href='https://gitlab.com/Nsns9' className='icon'
+                <motion.a href='https://gitlab.com/Nsns9' className='icon' aria-label="Gitlab"
                  whileHover={{scale:1.1}} whileTap={{scale:0.95}}
                  target="_blank" rel="noopener noreferrer">
                 <Icon name="Gitlab" w="100%" h="100%"/>
                 </motion.a>
-                <motion.a href='https://github.com/NisrinML' className='icon'
+                <motion.a href='https://github.com/NisrinML' className='icon' aria-label="Github"
                  whileHover={{scale:1.1}} whileTap={{scale:0.95}}
                  target="_blank" rel="noopener noreferrer">
                 <Icon name="Github" w="100%" h="100%"/>
                 </motion.a>
-                <motion.a href='https://www.facebook.com/share/18KyrpQ9oG/' className='icon'
+                <motion.a href='https://www.facebook.com/share/18KyrpQ9oG/' className='icon' aria-label="Facebook"
                  whileHover={{scale:1.1}} whileTap={{scale:0.95}}
                  target="_blank" rel="noopener noreferrer"
                  >
                 <Icon name="Facebook" w="100%" h="100%"/>
                 </motion.a> 
-                <motion.a href='https://www.instagram.com/nisrin.melhem?igsh=cGkzaGp2bTUzNjBy' className='icon'
+                <motion.a href='https://www.instagram.com/nisrin.melhem?igsh=cGkzaGp2bTUzNjBy' className='icon' aria-label="Instagram"
                  whileHover={{scale:1.1}} whileTap={{scale:0.95}}
                  target="_blank" rel="noopener noreferrer"
                  >

@@ -32,7 +32,7 @@ const About = () => {
         <motion.div className='about' variants={variants} ref={ref}
             initial="initial" whileInView="animate">
             <motion.div className="imageContainer" variants={variants} >
-                <img src={Me} alt="nisreen's image" loading='lazy'/>
+                <img src={Me} alt="nisreen's image" loading='lazy' width={400}/>
             </motion.div>
             <motion.div className="textContainer" variants={variants} >
                 <h1>Nisreen Melhem</h1>

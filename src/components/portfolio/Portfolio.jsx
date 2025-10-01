@@ -102,7 +102,7 @@ const Portfolio = () => {
             <motion.div className="textContainer" style={{ y }}>
               <h2 >{project.title}</h2>
               <p>{project.desc}</p>
-              <button disabled={locked} className={locked ? 'disabled' : ''} onClick={() => handleProjectClick(project.link)}>
+              <button disabled={locked} className={locked ? 'disabled' : ''} onClick={() => handleProjectClick(project.link)}  aria-label="Project URL">
                 {locked ? <>
                   <Icon name="Lock" w="100%" h="100%" />
                   Private for {project.company}
